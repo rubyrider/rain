@@ -1,0 +1,21 @@
+version: '3.7'
+x-env: &env
+  env_file:
+    - ./.env
+services:
+  postgres:
+    <<: *env
+    image: "postgres:12"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tmp/var/run/postgresql:/var/run/postgresql
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    <<: *env
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres

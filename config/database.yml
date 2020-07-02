@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: rain_production
-  username: rain
-  password: <%= ENV['RAIN_DATABASE_PASSWORD'] %>
+  host: <%= ENV['RAIN_DATABASE_HOST'] %>
+  database: <%= ENV['RAIN_DATABASE_DB'] %>
+  username: <%= ENV['RAIN_DATABASE_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
