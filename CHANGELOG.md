@@ -9,5 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added deployment with docker
+- Added bootstrap css framework to webpack
 
 [Unreleased]: https://github.com/rubyrider/rain/compare/v1.0.0...HEAD
