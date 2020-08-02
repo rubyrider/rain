@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-
+- Added user self registration process (MVC-2)
 - Added deployment with docker
 - Added bootstrap css framework to webpack
 
